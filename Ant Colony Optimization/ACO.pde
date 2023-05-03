@@ -4,8 +4,12 @@ int scl=20;
 void setup(){
   size(700,700);
   ants=new Ant[10];
-  for(int i=0;i<10;i++)
+  for(int i=0;i<10;i++){
+  
   ants[i]=new Ant(699,699);
+  if(random(1)<0.5)
+  ants[i]=new Ant(0,0);
+  }
   grid=new Grid[width/scl][height/scl];
   for(int i=0;i<grid.length;i++)
     for(int j=0;j<grid[0].length;j++)
